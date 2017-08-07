@@ -7,7 +7,3 @@
 
 ![nodejs omdb screen 1](https://image.ibb.co/cO1FxF/nodejs_imdb_screen_1.jpg)
 ![nodejs omdb screen 1](https://image.ibb.co/dauDjv/nodejs_imdb_screen_2.jpg)
-
-
-#### Todo
-- [x] -n-
