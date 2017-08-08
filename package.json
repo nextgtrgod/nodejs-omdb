@@ -1,7 +1,7 @@
 {
 	"name": "nodejs-tmdb",
 	"version": "1.0.0",
-	"description": "Node.js tmdb movie search client",
+	"description": "Node.js omdb movie search client",
 	"scripts": {
 		"start": "nodemon server.js"
 	},
