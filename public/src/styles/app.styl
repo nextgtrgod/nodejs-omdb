@@ -1,0 +1,225 @@
+// normalize
+html, body
+	position relative
+	min-height 100%
+	width 100%
+	-ms-touch-action manipulation
+	touch-action manipulation
+	height 100%
+	margin 0
+	padding 0
+	display block
+	-webkit-text-size-adjust none
+
+
+// vars
+$font-family-default 	= 'Open Sans Condensed', sans-serif
+$font-size-default 		= 17px
+
+
+body
+	background-color #271C70
+	background-image url('../images/pixelwork.png')
+	background-position center
+	background-repeat no-repeat
+	background-size cover
+	position relative
+	height 100%
+	font-family: $font-family-default
+
+div
+	box-sizing border-box
+
+
+.app
+	position absolute
+	top 50%
+	transform translateY(-50%)
+	left 0
+	right 0
+	// bottom 0
+	width 100%
+	min-width 320px
+	padding 20px
+	margin auto
+	animation fadein .8s
+	@media(min-width 720px)
+		width 600px
+
+@keyframes fadein
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+
+.search-form
+	position relative
+	display block
+	width 85%
+	margin 20px auto 35px
+	box-sizing border-box
+	&>*
+		display inline-block
+		font-size 24px
+		color $color-text-main
+
+	input
+		position relative
+		display block
+		width 100%
+		padding 5px 45px 5px 10px
+		font-size 24px
+		font-family: $font-family-default
+		background-color #FFF
+		box-shadow 1px 2px 0px #111
+		border none
+		border-radius 4px
+		box-sizing border-box
+		transition box-shadow .2s
+		opacity .95
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover
+		&:-webkit-autofill:active
+		&:-webkit-autofill:focus
+			box-shadow 0 0 0px 50px #fff inset
+		&:focus
+			box-shadow 4px 5px 0px #111
+			outline none
+
+	button
+		position absolute
+		width 25px
+		height 25px
+		top 0
+		right 10px
+		bottom 0
+		margin auto
+		font-size 24px
+		border none
+		background-color transparent
+		cursor pointer
+		opacity .4
+		transition opacity .2s
+		z-index 2
+		&:hover
+			opacity 1
+
+		svg
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			margin auto
+
+
+.tape-img
+	width 80%
+	height 165px
+	margin auto
+	background-image: url('../images/tape-inverted-colors.png')
+	background-position center
+	background-size 100% auto
+	background-repeat no-repeat
+	opacity .95
+	filter drop-shadow(4px 5px 10px #111)
+
+
+.movie
+	height 380px
+	font-size 0
+	background-color #111
+	color #FFF
+	border-radius 4px
+	box-shadow 0px 20px 30px 3px rgba(0, 0, 0, 0.55)
+	// overflow hidden
+	&>*
+		display inline-block
+		vertical-align top
+	
+	&__poster
+		width 40%
+		height 100%
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		border-top-left-radius 4px
+		border-bottom-left-radius 4px
+	
+	&__info
+		width 60%
+		height 100%
+		padding 20px
+		font-size 17px
+		line-height 22px
+		overflow-y scroll
+		&__title
+			font-size 30px
+			line-height 35px
+			margin-bottom 10px
+		
+		span
+			font-size 14px
+			margin-right 15px
+		
+		&__rating
+			margin 10px auto
+
+
+// 404
+.page-not-found
+	position relative
+	height 100%
+	color #FFF
+	text-shadow 8px 5px 1px rgba(17, 17, 17, 0.85)
+	&:after
+		content ''
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		height 50%
+		margin auto
+		background-image url('../images/404.gif')
+		background-position left center
+		background-size auto 100%
+		background-repeat no-repeat
+
+	h1
+		font-size 95px
+		font-weight 100
+		line-height 1
+		margin 50px 0 0
+	span
+		font-size 50px
+
+
+
+// scrollbar
+::-webkit-scrollbar
+	width 10px
+	height 10px
+
+::-webkit-scrollbar-button
+	width 0px
+	height 0px
+
+::-webkit-scrollbar-thumb
+	background #e1e1e1
+	border none
+	border-radius 0
+	&:hover
+	&:active
+		background #FFF
+
+::-webkit-scrollbar-track
+	background #111
+	border none
+	border-radius 0px
+	&:hover
+	&:active
+		background #111
+
+::-webkit-scrollbar-corner
+	background transparent

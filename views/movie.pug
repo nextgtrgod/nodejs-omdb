@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	.app
+		.movie
+			.movie__poster(style=`background-image: url(${poster})`)
+
+			.movie__info
+				.movie__info__title= title
+
+				span= year
+				span= runtime
+				span= genre
+
+				.movie__info__rating
+					= rating
+					span /10
+
+				p= description
+
+				p= `Director: ${director}`
+
+				p= `Writer: ${writer}`
+				
+				p= `Stars: ${actors}`
